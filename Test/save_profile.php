@@ -20,6 +20,7 @@
 	}
 	$strSQL = "UPDATE member SET Password = '".trim($_POST['txtPassword'])."' 
 	,Name = '".trim($_POST['txtName'])."' WHERE UserID = '".$_SESSION["UserID"]."' ";
+	
 	$objQuery = mysqli_query($objCon,$strSQL);
 	
 	echo "Save Completed!<br>";		
