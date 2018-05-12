@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
 <?php
     session_start();
     $namesever = "localhost";
@@ -15,11 +24,18 @@
 
 	
     $objQuery = mysqli_query($objcon,$strSQL);
-    
+    if($_POST['id']&&$_POST['pass'])
     {
         echo"เสร็จละไปหน้าลอกอินแล้วกรอกใหม่ละกัน<br>";
 		echo "<br> Go to <a href='login.php'>User page</a>";
-	}
+	}else{
+        echo '<script language="javascript">';
+        echo 'alert("กรอกไม่ครบอีผี")';
+        echo '</script>';
+        echo "<br> Go to <a href='register.html'>หน้าสมัคร</a>";
+    }
 	
 	mysqli_close($objcon);
 ?>
+</body>
+</html>
