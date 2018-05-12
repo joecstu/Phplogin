@@ -31,11 +31,11 @@
 			
 			if($objResult["Status"] == "ADMIN")
 			{
-				header("location:admin_page.php");
+				header("location:status.php");
 			}
 			else
 			{
-				header("location:user_page.php");
+				header("location:status.php");
 			}
 	}
 	mysqli_close($objcon);
