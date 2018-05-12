@@ -19,15 +19,15 @@
     $starus = "USER";
 
 
-    $strSQL= "INSERT INTO member(Username,Password , Name, Status,img)  VALUES 
-    ('".trim($_POST['id'])."','".trim($_POST['pass'])."','".trim($_POST['id'])."','".trim($starus)."','1')";
 
-	
-    $objQuery = mysqli_query($objcon,$strSQL);
     if($_POST['id']&&$_POST['pass'])
     {
+        $strSQL= "INSERT INTO member(Username,Password , Name, Status,img)  VALUES 
+        ('".trim($_POST['id'])."','".trim($_POST['pass'])."','".trim($_POST['id'])."','".trim($starus)."','1')";
+        $objQuery = mysqli_query($objcon,$strSQL);
         echo"เสร็จละไปหน้าลอกอินแล้วกรอกใหม่ละกัน<br>";
-		echo "<br> Go to <a href='login.php'>User page</a>";
+        echo "<br> Go to <a href='login.php'>User page</a>";
+        
 	}else{
         echo '<script language="javascript">';
         echo 'alert("กรอกไม่ครบอีผี")';
