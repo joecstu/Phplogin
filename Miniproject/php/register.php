@@ -9,8 +9,9 @@
     $objcon = mysqli_connect($namesever , $user,$pass,$dmname);
     $starus = "USER";
 
-    $strSQL= "INSERT INTO member(Username,Password , Name, Status)  VALUES 
-    ('".trim($_POST['id'])."','".trim($_POST['pass'])."','".trim($_POST['id'])."','".trim($starus)."')";
+
+    $strSQL= "INSERT INTO member(Username,Password , Name, Status,img)  VALUES 
+    ('".trim($_POST['id'])."','".trim($_POST['pass'])."','".trim($_POST['id'])."','".trim($starus)."','1')";
 
 	
     $objQuery = mysqli_query($objcon,$strSQL);

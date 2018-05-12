@@ -15,7 +15,8 @@
             echo "$a";
         ?>
         <br>
-        <table boder="1" style = "width:300px">
+        <div>
+        <table align="center">
             <tr>
             <td> ID</td>
             <td>
@@ -29,6 +30,7 @@
             </td>
             </tr>
         </table>
+        <div>
         <br>
         <input type="submit" name="Submit" value="Login">
     </form>

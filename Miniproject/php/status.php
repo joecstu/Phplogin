@@ -23,7 +23,12 @@ session_start();
     <link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
 <body>
-<?php echo $objResult["UserID"]."<br>";
+
+<form action="logout.php">
+
+<?php
+    echo 'สวัสดี';
+    echo $objResult["Name"]."<br>";
  echo $objResult["img"];
     $img = $objResult["img"];
  if($img==1){
@@ -42,12 +47,11 @@ session_start();
 
 ?>
 
+<button>ลอกเอ๊า</button>
+
+</form>
 
 
-    <div>
-        <img src="" alt="">
-
-    </div>
 
 </body>
 </html>
