@@ -48,10 +48,10 @@ session_start();
 
 ?>
 
-<button>ลอกเอ๊า</button>
+<button class="button button3">ลอกเอ๊า</button>
 
 </form>
-
+<input class="button button3" type="button" value="บันทึกเรื่องราว" onclick="window.location.href='dairy.php'" />
 
 
 </body>
