@@ -33,10 +33,10 @@
         </table>
         <div>
         <br>
-        <input type="submit" name="Submit" value="Login">
+        <input class="button button3" type="submit" name="Submit" value="Login">
     </form>
     <form action="register.html">
-    <input action="register.html" type="submit" name="Register" value="Register">
+    <input class="button button3" action="register.html" type="submit" name="Register" value="Register">
     </form>
     
     </div>
