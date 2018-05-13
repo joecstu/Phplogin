@@ -25,6 +25,17 @@
         $strSQL= "INSERT INTO member(Username,Password , Name, Status,img)  VALUES 
         ('".trim($_POST['id'])."','".trim($_POST['pass'])."','".trim($_POST['id'])."','".trim($starus)."','1')";
         $objQuery = mysqli_query($objcon,$strSQL);
+        
+
+        $str = "SELECT * FROM member WHERE Username = '".mysqli_real_escape_string($objcon,$_POST['id'])."' ";
+        $objQuery = 	$objQuery = mysqli_query($objcon,$str);
+        $objResult = mysqli_fetch_array($objQuery,MYSQLI_ASSOC);
+        
+        echo $objResult["UserID"];
+
+        $str = "INSERT INTO `dairy`(`id`) VALUES ('".trim($objResult["UserID"])."')";
+        $objQuery = mysqli_query($objcon,$str);
+
         echo"เสร็จละไปหน้าลอกอินแล้วกรอกใหม่ละกัน<br>";
         echo "<br> Go to <a href='login.php'>User page</a>";
         
