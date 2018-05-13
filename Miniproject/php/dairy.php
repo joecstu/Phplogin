@@ -10,7 +10,7 @@
 	$str = "SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ";
     $objQuery = 	$objQuery = mysqli_query($objcon,$str);
     $objResult = mysqli_fetch_array($objQuery,MYSQLI_ASSOC) ;
-
+    session_write_close();
 	mysqli_close($objcon);
 ?>
 <!DOCTYPE html>
@@ -30,11 +30,10 @@
         ?>
         
 
-<form action="/save.php">
-เรื่องราววันนี้: <input style = "    width: 300px;
-     height:300px;" type="text" name="story" w ><br>
+<form method="post"  action="save.php">
+<textarea name="story" id="story" cols="30" rows="10" type = "text"></textarea>
 <input type="submit" value="Submit">
-</form  
+</form>
     </div>
 </body>
 </html>

@@ -11,6 +11,7 @@ session_start();
 	$str = "SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ";
     $objQuery = 	$objQuery = mysqli_query($objcon,$str);
     $objResult = mysqli_fetch_array($objQuery,MYSQLI_ASSOC) ;
+    session_write_close();
 
 ?>
 <!DOCTYPE html>
