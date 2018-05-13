@@ -13,4 +13,7 @@
 
     $objQuery = mysqli_query($objcon,$str);
 
+    echo"เสร็จละไปหน้าเมนูหลักละกัน<br>";
+    echo "<br> Go to <a href='status.php'>User page</a>";
+
 ?>

@@ -54,6 +54,8 @@ session_start();
 </form>
 <input class="button button3" type="button" value="บันทึกเรื่องราว" onclick="window.location.href='dairy.php'" />
 
+<input class="button button3" type="button" value="เรื่องที่เคยบันทึกไว้" onclick="window.location.href='write.php'" />
+
 
 </body>
 </html>
