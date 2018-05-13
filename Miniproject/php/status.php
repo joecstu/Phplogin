@@ -22,7 +22,6 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
 
@@ -55,6 +54,7 @@ session_start();
 <input class="button button3" type="button" value="บันทึกเรื่องราว" onclick="window.location.href='dairy.php'" />
 
 <input class="button button3" type="button" value="เรื่องที่เคยบันทึกไว้" onclick="window.location.href='write.php'" />
+<input class="button button3" type="button" value="ลบเรื่องที่เคยบันทึกไว้" onclick="window.location.href='delete.php'" />
 
 
 </body>

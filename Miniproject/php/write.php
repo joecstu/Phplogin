@@ -13,7 +13,7 @@ session_start();
     $objResult = mysqli_fetch_array($objQuery,MYSQLI_ASSOC) ;
     
 
-    echo $objResult["dairy"];
+    echo $objResult["dairy"]."<br>";
     
 
     session_write_close();
@@ -29,9 +29,10 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
+
+    <input class="button button3" type="button" value="กลับไปหน้าหลัก" onclick="window.location.href='status.php'" />
     
 </body>
 </html>
