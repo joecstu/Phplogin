@@ -17,13 +17,13 @@
     //ทำการเชื่อต่อเข้าระบบ
     $objcon = mysqli_connect($namesever , $user,$pass,$dmname);
     $starus = "USER";
+    $a =  strcasecmp( $_POST['pass'], $_POST['pass1']);
+    echo $a;
 
-
-
-    if($_POST['id']&&$_POST['pass'])
+    if($_POST['id']&&$_POST['pass'] &&$a==0)
     {
         $strSQL= "INSERT INTO member(Username,Password , Name, Status,img)  VALUES 
-        ('".trim($_POST['id'])."','".trim($_POST['pass'])."','".trim($_POST['id'])."','".trim($starus)."','1')";
+        ('".trim($_POST['id'])."','".trim($_POST['pass'])."','".trim($_POST['name'])."','".trim($starus)."','1')";
         $objQuery = mysqli_query($objcon,$strSQL);
         
 
